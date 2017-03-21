@@ -1,7 +1,7 @@
 spring:
   application.name: github-analytics
 
-  cloud.stream.bindings:input:
+  cloud.stream.bindings.input:
     destination: messages
     content-type: application/json
 

@@ -1,4 +1,3 @@
-stubrunner.repositoryRoot: ${REPO_WITH_JARS:https://repo.spring.io/milestone/}
 spring:
   jpa.hibernate.ddl-auto: update
   datasource:
