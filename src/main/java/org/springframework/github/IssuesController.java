@@ -50,7 +50,7 @@ class IssuesController {
 	@GetMapping
 	public List<IssueDto> allIssues() {
 		List<IssueDto> dtos = new ArrayList<>();
-		repository.findAll().forEach(i -> dtos.add(new IssueDto(i.getUsername(), i.getRepository())));
+		repository.findAll().forEach(i -> dtos.add(new IssueDto(i.getUsername(), i.getRepo())));
 		return dtos;
 	}
 
