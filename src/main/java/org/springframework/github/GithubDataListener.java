@@ -24,7 +24,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.stereotype.Component;
 
 @Component
-class GithubDataListener {
+public class GithubDataListener {
 
 	private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 

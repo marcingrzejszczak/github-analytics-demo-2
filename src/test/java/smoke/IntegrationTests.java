@@ -48,7 +48,7 @@ public class IntegrationTests {
 
 	private ResponseEntity<Map> triggerMessage() {
 		return this.restTemplate.postForEntity("http://" +
-				this.stubRunnerUrl + "/triggers/hook_created_v2", "", Map.class);
+				this.stubRunnerUrl + "/triggers/issue_created_v2", "", Map.class);
 	}
 
 	private Integer countGithubData() {
