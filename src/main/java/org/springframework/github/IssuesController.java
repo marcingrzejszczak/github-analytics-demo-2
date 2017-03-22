@@ -41,7 +41,7 @@ class IssuesController {
 
 	@GetMapping("/count")
 	public long count() {
-		long size = service.count();
+		long size = service.numberOfIssues();
 		log.info("Size of issues equals [{}]", size);
 		return size;
 	}

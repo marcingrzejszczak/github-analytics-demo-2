@@ -22,7 +22,7 @@ public class BaseClass {
 
 	IssuesService issuesService() {
 		IssuesService repo = Mockito.mock(IssuesService.class);
-		given(repo.count()).willReturn(5L);
+		given(repo.numberOfIssues()).willReturn(5L);
 		given(repo.allIssues()).willReturn(issues());
 		return repo;
 	}

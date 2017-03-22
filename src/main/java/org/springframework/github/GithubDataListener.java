@@ -28,16 +28,16 @@ class GithubDataListener {
 
 	private static final Logger log = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-	private final IssuesRepository repository;
+	private final IssuesService service;
 
-	GithubDataListener(IssuesRepository repository) {
-		this.repository = repository;
+	GithubDataListener(IssuesService service) {
+		this.service = service;
 	}
 
 	@StreamListener(Sink.INPUT)
 	public void listen(GithubDatum data) {
 		log.info("Received a new message [{}]", data);
-		repository.save(new Issues(data.getUsername(), data.getRepository()));
+		service.save(data.getUsername(), data.getRepository());
 	}
 
 }

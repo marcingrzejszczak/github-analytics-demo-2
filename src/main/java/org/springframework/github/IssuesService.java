@@ -25,7 +25,7 @@ class IssuesService {
 	}
 
 	private void submitCountMetric() {
-		submitCountMetric(doCount());
+		submitCountMetric(count());
 	}
 
 	private void submitCountMetric(long numbers) {
@@ -38,13 +38,13 @@ class IssuesService {
 		return dtos;
 	}
 
-	long count() {
-		long count = doCount();
+	long numberOfIssues() {
+		long count = count();
 		submitCountMetric(count);
 		return count;
 	}
 
-	private long doCount() {
+	private long count() {
 		return this.repository.count();
 	}
 
