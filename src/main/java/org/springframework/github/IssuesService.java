@@ -21,11 +21,15 @@ class IssuesService {
 
 	void save(String user, String repo) {
 		this.repository.save(new Issues(user, repo));
-		countIssues();
+		submitCountMetric();
 	}
 
-	private void countIssues() {
-		this.gaugeService.submit("issues.count", count());
+	private void submitCountMetric() {
+		submitCountMetric(doCount());
+	}
+
+	private void submitCountMetric(long numbers) {
+		this.gaugeService.submit("issues.count", numbers);
 	}
 
 	List<IssueDto> allIssues() {
@@ -35,12 +39,18 @@ class IssuesService {
 	}
 
 	long count() {
+		long count = doCount();
+		submitCountMetric(count);
+		return count;
+	}
+
+	private long doCount() {
 		return this.repository.count();
 	}
 
 	void deleteAll() {
 		this.repository.deleteAll();
-		countIssues();
+		submitCountMetric();
 	}
 
 }
