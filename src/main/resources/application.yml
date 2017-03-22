@@ -7,3 +7,4 @@ spring:
     database: MYSQL
 
 server.port: ${PORT:8081}
+endpoints.sensitive: false
