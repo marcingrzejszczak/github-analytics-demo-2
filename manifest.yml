@@ -2,8 +2,8 @@
 applications:
 - name: github-analytics
   services:
-    - rabbitmq-github-analytics
-    - mysql-github-analytics
+    - rabbitmq-github
+    - mysql-github
   env:
     SPRING_PROFILES_ACTIVE: cloud
     DEBUG: "true"
