@@ -5,8 +5,6 @@ spring:
 
   jpa:
     database: MYSQL
-    hibernate.naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
-
 
 server.port: ${PORT:8081}
 endpoints.sensitive: false
