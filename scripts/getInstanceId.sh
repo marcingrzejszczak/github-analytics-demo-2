@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-curl http://github-analytics.local.pcfdev.io/env | jq ".systemEnvironment.INSTANCE_GUID"
+curl -s http://github-analytics.local.pcfdev.io/env | jq ".systemEnvironment.INSTANCE_GUID"
