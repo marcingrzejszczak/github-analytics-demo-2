@@ -8,3 +8,4 @@ spring:
 
 server.port: ${PORT:8081}
 endpoints.sensitive: false
+management.security.enabled: false
