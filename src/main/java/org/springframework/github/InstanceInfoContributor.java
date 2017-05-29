@@ -12,7 +12,7 @@ class InstanceInfoContributor implements InfoContributor {
     @Override
     public void contribute(Info.Builder builder) {
         builder.withDetail("cf_instance",
-                Collections.singletonMap("id", System.getenv("CF_INSTANCE_INDEX")));
+                Collections.singletonMap("id", System.getenv("INSTANCE_ID")));
     }
 
 }
