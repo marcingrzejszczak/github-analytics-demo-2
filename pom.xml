@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example.github</groupId>
-	<artifactId>github-analytics</artifactId>
+	<artifactId>github-analytics-2</artifactId>
 	<version>0.0.1.M1</version>
 	<packaging>jar</packaging>
 
@@ -25,7 +25,7 @@
 		<spring-cloud-bom.version>Camden.SR6</spring-cloud-bom.version>
 		<prometheus.version>0.0.21</prometheus.version>
 		<!-- [PIPELINE] Stub group, artifact ids needed by Stub Runner -->
-		<stubrunner.ids>com.example.github:github-webhook</stubrunner.ids>
+		<stubrunner.ids>com.example.github:github-webhook-2</stubrunner.ids>
 		<!-- [PIPELINE] -->
 		<distribution.management.release.id>artifactory-local</distribution.management.release.id>
 		<!-- [PIPELINE] -->

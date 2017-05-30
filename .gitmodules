@@ -3,4 +3,4 @@
 	url = https://github.com/marcingrzejszczak/prometheus.git
 [submodule "github-webhook"]
 	path = github-webhook
-	url = git@github.com:spring-cloud-samples/github-webhook.git
+	url = git@github.com:marcingrzejszczak/github-webhook-2.git
